@@ -1,0 +1,36 @@
+{
+	"y1986": {
+		"year": 1986,
+		"name": "Alf ",
+		"image": "https://m.media-amazon.com/images/M/MV5BYmRhNzk2YWUtNWIxNC00YWM3LWI5ODEtN2IwOGQzYWEwMWJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+		"selfie": "true",
+		"author1": "Alf",
+		"author2": "",
+		"author1img": "https://m.media-amazon.com/images/M/MV5BMTQ3MjE1NzM4M15BMl5BanBnXkFtZTgwMTYxMTY1MTE@._V1_UY100_CR11,0,100,100_AL_.jpg",
+		"author2img": "",
+		"type": "tv",
+		"link": "https://youtube.com"
+	},
+	"y1987": {
+		"year": 1987,
+		"name": "GIF ",
+		"image": "https://media.giphy.com/media/vcKEsYOdjoCeJRpn95/giphy.gif",
+		"author1": "Steve Wilhite",
+		"author2": "Steve Wilhite",
+		"author1img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBER1eCrLinuDJtdsjZzrjeB2LMU5k9eyCtFymbHdW4AgCqxCN",
+		"author2img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBER1eCrLinuDJtdsjZzrjeB2LMU5k9eyCtFymbHdW4AgCqxCN",
+		"type": "tv",
+		"link": "https://youtube.com"
+	},
+	"y1989": {
+		"year": 1989,
+		"name": "Seinfeld ",
+		"image": "https://m.media-amazon.com/images/M/MV5BZjZjMzQ2ZmUtZWEyZC00NWJiLWFjM2UtMzhmYzZmZDcxMzllXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SY1000_CR0,0,701,1000_AL_.jpg",
+		"author1": "Jerry Seinfeld",
+		"author2": "Kramer",
+		"author1img": "https://m.media-amazon.com/images/M/MV5BMTU5NTM5OTI1M15BMl5BanBnXkFtZTgwMTE1NzcxNDM@._V1_UX100_CR0,0,100,100_AL_.jpg",
+		"author2img": "https://m.media-amazon.com/images/M/MV5BMTc0MzY4MDgtMTRhMy00MmQ3LWI0YTUtY2NmNzkyMzZmNWJlXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_UX100_CR0,0,100,100_AL_.jpg",
+		"type": "tv",
+		"link": "https://youtube.com"
+	}
+}

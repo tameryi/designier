@@ -52,6 +52,9 @@ a {
 .gradient{
   background:var(--gradient);
 }
+.transition {
+  transition: var(--transition);
+}
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
   font-family: var(--font-family2);
   font-weight: 800;
@@ -65,6 +68,9 @@ h2,.h2{
 }
 h5,.h5,h6,.h6{
   font-weight: 500;
+}
+h5.bold,.h5.bold,h6.bold,.h6.bold{
+  font-weight: 700;
 }
 strong{
   font-weight: 700;
@@ -291,7 +297,7 @@ header .nav-link{
 }
 
 /*====== MAIN SECTION ======*/
-main > section:nth-child(odd) {
+main > section:nth-child(even) {
   background-color: #fff;
 }
 .sub-title{
@@ -320,7 +326,12 @@ body:not(.home) .hero::before {
   margin-bottom: 2rem;
 }
 .design-benefits .badge{
-  font-weight: 300;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 .design-faq li{
   margin-bottom: 3rem;
@@ -350,12 +361,45 @@ body:not(.home) .hero::before {
     left: -10%;
   }
 }
+.our-works li {
+  border-radius: 1rem;
+  transition: .4s;
+}
+.our-works li:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+.our-works li img {
+  border-radius: 1rem;
+  box-shadow:0px 4px 16px rgba(33, 36, 41, 0.1);
+}
+.our-works li img:hover {
+  box-shadow:0px 4px 26px rgba(33, 36, 41, 0.12);
+}
+@media only screen and (max-width: 700px) {
+  .our-works ul {
+    overflow-x: auto !important;
+  }
+}
 
 /*====== PRICING SECTION ======*/
+
+.pricing-table .guarantee{
+  background-color: #FFF3F7;
+}
+.book-a-call a{
+  display: flex;
+  align-items: center;
+}
+.book-a-call a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
 .pricing-table .plans,
 .pricing-table .pricing-body{
   min-height: 540px;
   transition: box-shadow ease-in 0.25s;
+  border-left: 1px solid #eee;
 }
 .pricing-table .plans:hover{
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
@@ -386,6 +430,8 @@ body:not(.home) .hero::before {
   font-size: small;
   margin-bottom: .5rem;
   padding-left: .5rem;
+  display: flex;
+  align-items: baseline;
 }
 .pricing-table .list-unstyled li::before{
   content: "";
@@ -402,6 +448,16 @@ body:not(.home) .hero::before {
   .pricing-table .guarantee{
     order: 2;
   }
+  .pricing-table .plans,
+  .pricing-table .pricing-body{
+    border-left: 0;
+    border-top: 1px solid #eee;
+  }
+}
+/*====== PROFILE SECTION ======*/
+.contact-form {
+  height: 760px;
+  overflow: hidden;
 }
 
 /*====== PROFILE SECTION ======*/
@@ -414,10 +470,12 @@ footer {
   background-color: var(--default-color);
   color: #fff;
 }
-footer h2{
+footer .footer-title{
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  letter-spacing: -.4rem;
 }
 footer a{
   color: #fff;
@@ -600,52 +658,3 @@ footer .nav-link{
       opacity: 0;
   }
 }
-
-
-/*====== CURVED ARROW 
-
-.arrow2 {
-	position: relative;
-  margin: 0 auto;
-  width: 100px;
-}
-
-.arrow2 .curve {
-	border: 2px solid #BE5F4B;
-	border-color: transparent transparent transparent #BE5F4B;
-	height: 360px;
-	width: 1200px;
-	border-radius: 230px 0 0 150px;
-}
-
-.arrow2 .point {
-	position: absolute;
-	left: 40px;
-	top: 315px;
-}
-
-.arrow2 .point:before, .arrow2 .point:after {
-	border: 1px solid #BE5F4B;
-	height: 25px;
-	content: "";
-	position: absolute;
-}
-
-.arrow2 .point:before {
-	top: -11px;
-	left: -11px;
-	transform:rotate(-74deg);
-	-webkit-transform:rotate(-74deg);
-  -moz-transform:rotate(-74deg);
-  -ms-transform: rotate(-74deg);
-}
-
-.arrow2 .point:after {
-  top: -20px;
-	left: 5px;
-	transform:rotate(12deg);
-	-webkit-transform: rotate(12deg);
-  -moz-transform:rotate(12deg);
-  -ms-transform: rotate(12deg);
-}
-======*/

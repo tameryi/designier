@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1218328-43"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-1218328-43');
+</script>
+    <title>Ne kadar yaşlısın?</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" >
+</head>
+<body>
+<div class="container">
+    <div class="col-left">
+        <h1 class="logo" title="Ne kadar yaşlısın?"><img src="images/logo.svg" alt="ne kadar yaşlısın?"></h1>
+        <div class="description">Doğum yılını seç de ne kadar yaşlandığını bi gör.</div>
+        <div class="select">
+            <select class="age">
+                <option id="ageOption" value="0">Doğum Yılın?</option>
+            </select>
+            <i class="caret arrow down"></i>
+        </div>
+    </div>
+    <div class="col-right"></div>
+
+</div>
+<div class="buttons" style="display: none;">
+    <a class="btn" id="prev" href="#" ripple=""><i class="arrow left"></i></a>
+    <div class="dots"></div>
+    <a class="btn" id="next" href="#" ripple=""><i class="arrow right"></i></a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+<script>
+
+    $(document).ready(function() {
+
+        for(i = 1970 ; i <= 2005 ; i ++){
+           $(".age").append("<option value='"+i+"'>"+i+"</option>");
+        }
+
+        var comment = "";
+        var jsonMovie;
+        var jsonTv;
+        select_year = $(".age").val();
+        current_year = new Date().getFullYear();
+        var current_age;
+
+
+        $.getJSON("films.json")
+            .then(function(json) {
+                
+                $(".col-right").append("<div class='opening'><div class='display'></div></div>");
+                jsonMovie = json;
+                $(".age").change(function(){
+                    select_year = $(".age").val();
+                    current_age = current_year - select_year;
+
+                    $(".col-right").html("");
+                    
+                    $.each(json, function(i, item) {
+                        if(item.year == select_year){
+                            $(".opening").remove();
+                            $("#ageOption").remove();
+                            $(".col-right").append("<div class='slide slide-"+i+"'><div class='display display-"+i+"'></div><div class='sidebar'><div class='details details-"+i+"'><div class='comment comment4 comment-"+i+"'></div></div></div></div>");
+                            $(".display-" + i).html("<div class='poster'><div class='image'><img src='"+item.image+"' alt='"+item.name+"'/></div></div>");
+                            if(item.name.length < 20){
+                                
+                                if (item.author2){
+                                    if (item.type == "tv"){
+                                        var quote1 = "dizi daha yeni gelmişti.";
+                                    }else if (item.type == "game"){
+                                        var quote1 = "oyun daha yeni çıkmıştı.";
+                                    }else if (item.type == "movie"){
+                                        var quote1 = "film daha yeni sinemalara gelmişti.";
+                                    }else{
+                                        var quote1 = "daha yeni çıkmıştı.";
+                                    }
+                                    $(".details-" + i).prepend("<div class='comment comment2'><i class='author'><img src='"+item.author2img+"' alt=''/>"+item.author2+"</i>Sen doğduğunda bu "+quote1+" Hey gidi..</div>");
+                                }
+                                if (item.selfie){
+                                    $(".details-" + i).prepend("<div class='comment comment1'><i class='author'><img src='"+item.author1img+"' alt=''/>"+item.author1+"</i> benim kadar yaşlısın ha!</div>");
+                                }else {
+                                    $(".details-" + i).prepend("<div class='comment comment1'><i class='author'><img src='"+item.author1img+"' alt=''/>"+item.author1+"</i>"+item.name+" kadar yaşlısın ha!</div>");
+                                }
+                                
+                                $(".comment-" + i).html(generateQuote());
+                                comment = $(".comment-" + i).html();
+                                $(".comment-" + i).append("<i class='author last-author'><img src='"+item.author1img+"' alt=''/>"+item.author1+"</i>");
+                                
+                            }else
+                            {
+                                if (item.selfie){
+                                    $(".details-" + i).prepend("<div class='comment comment1'><i class='author'><img src='"+item.author1img+"' alt=''/>"+item.author1+"</i> benim kadar yaşlısın ha!</div>");
+                                }else {
+                                    $(".details-" + i).prepend("<div class='comment comment3'><i class='author'><img src='"+item.author1img+"' alt=''/>"+item.author1+"</i>Bu film kadar yaşlısın ha?</div>");
+                                }
+                                
+                                $(".comment4").html(generateQuote());
+                                comment = $(".comment4").html();
+                                $(".details-" + i).addClass("last-comment");
+                                $(".comment-" + i).append("<i class='author last-author'><img src='"+item.author2img+"' alt=''/>"+item.author2+"</i>");
+                            }
+                            $(".details-" + i).prepend("<div class='title'>"+item.name+"<div class='year'>"+item.year+"</div></div>");
+                            
+                        }
+                    })
+                            
+                    $(".col-right .slide:first").addClass("active");
+
+                    // $(".comment4").html(generateQuote());
+                    // comment = $(".comment4").html();
+                    // $(".last-author").appendTo( $(".comment4") );
+                    // $(".comment4").appendTo( $(".movie-details") );
+
+                    $(".container").addClass("selected"); 
+
+                    // SLIDER
+
+                    if ($('.slide').length > 1) {
+                        
+                        $(".buttons").show(); 
+                        $(".buttons").appendTo( $(".container") );
+                        $(".dots").html("");
+                        var dots = $('.slide').length;
+                        for(i = 1 ; i <= dots ; i ++){
+                           $(".dots").append("<i class='dot'></i>");
+                        }
+                    }
+                    else {
+                        $(".buttons").hide(); 
+                    }
+
+                    var productItem = $('.slide'),
+                    productCurrentItem = productItem.filter('.active');
+
+                    var dotItem = $('.dot'),
+                    dotCurrentItem = dotItem.filter('.active');
+
+                    dotItem.first().addClass('active');
+
+                    $('#next').on('click', function (e) {
+                        e.preventDefault();
+
+                        var nextItem = productCurrentItem.next();
+                        var nextDot = dotCurrentItem.next();
+
+                        productCurrentItem.removeClass('active');
+                        dotCurrentItem.removeClass('active');
+
+                        if (nextItem.length) {
+                          productCurrentItem = nextItem.addClass('active');
+                          dotCurrentItem = nextDot.addClass('active');
+                        } else {
+                          productCurrentItem = productItem.first().addClass('active');
+                          dotCurrentItem = dotItem.first().addClass('active');
+                        }
+                    });
+
+                    $('#prev').on('click', function (e) {
+                        e.preventDefault();
+
+                        var prevItem = productCurrentItem.prev();
+                        var prevDot = dotCurrentItem.prev();
+
+                        productCurrentItem.removeClass('active');
+                        dotCurrentItem.removeClass('active');
+
+                        if (prevItem.length) {
+                          productCurrentItem = prevItem.addClass('active');
+                          dotCurrentItem = prevDot.addClass('active');
+                        } else {
+                          productCurrentItem = productItem.last().addClass('active');
+                          dotCurrentItem = dotItem.last().addClass('active');
+                        }
+                    });
+
+                });
+
+                // var i;
+                // for(i = 1 ; i < 7 ; i ++){
+                    // $.each(json, function(i, item) {
+                        $(".opening > .display").append("<div class='img2'><img src='images/nekadaryaslisin.jpg' alt='ne kadar yaşlısın'/></div>");
+                    // })
+                // }
+
+            })
+            .fail(function() {
+                // $(".display").html("<div class='error'>bir şeyler olmadı</div>");
+            });
+            
+        function generateQuote() {
+            do {
+                if ((current_age < 37) && (current_age > 25)){
+                    var quotes = ["Ama o yıl neydi ya öyle!","Hayat ne kadar hızlı geçiyor 😔","Oo efsane nesil 😍" ]
+                }else if(current_age >= 37){
+                    var quotes = ["Namaza başlama vakti gelmiş bence 🙏","Oha, sen baya yaşlanmışsın 😲","Aa ne kadar genç gösteriyorsun 🙄","Oo dinozor nesil 😂","Daha ölmedik! 💪","Emeklilikte yaşa takılanlar buradaymış 😂","Sahip çıkalım dedeye! 😅"]
+                }else if(current_age <= 25){
+                    var quotes = ["Daha gençsin, tazesin 😉","Lütfen çocukları pistten alalım 😜","Sen yenisin galiba 😝"]
+                }else{
+                    var quotes = []
+                }
+              var randomArrayPosition = Math.floor(Math.random() * quotes.length);
+              var quote = quotes[randomArrayPosition];
+
+            } while (quote === comment)
+
+            return quote;
+        }
+
+
+
+
+    });
+
+</script>
+<script src="//code.tidio.co/8asph0xkinpud8xssmrqnlcsiat6reqh.js" async></script></body>
+</html>

@@ -1,0 +1,46 @@
+
+61 																zagor
+62
+63
+64 																nike
+65
+66 																Star Trek, The Good, the Bad and the Ugly
+67 																big mac
+68 																	2001: A Space Odyssey
+69 																	bonanza
+70 Love Story
+71 Fiddler on the Roof, starbucks, 									Otomatik Portakal
+72 The Godfather
+73 The Exorcist
+74 Blazing Saddles													Chinatown
+75 Jaws, microsoft, Hababam Sınıfı
+76 Rocky, apple, Taxi Driver										charlies angels, 
+77 Star Wars: Episode IV, Selvi Boylum Al Yazmalım
+78 Grease, Kibar Feyzo, 											Neşeli Günler
+79 Alien, Walkman, Apocalypse Now 								
+80 Star Wars: Episode V, pacman, dallas
+81 Indiana Jones, metallica, mad max 								şirinler the smurf
+82 E.T., first emoticon, kara şimşek								magnum p.i, 
+83 Star Wars: Episode VI, moonwalk, he-man, A-Team 					scarface
+84 Ghostbusters, A Nightmare on Elm Street,the terminator,voltran			cosby show, , the karate kid, police academy
+85 Back to the Future, rambo
+86 Top Gun, Alf, Olacak O kadar									
+87 RoboCop, GIF, Ninja Kaplumbağalar									
+88 Rain Man, beterböcek, Zor Ölüm
+89 Batman, seinfeld 							the simpsons, game boy, tango ve cash, the punisher, bak şu konuşana
+90 evde tek başına, kurtlarla dans, 			the godfather III
+91 Kuzuların Sessizliği, Addams Ailesi			SMS
+92 Rezervuar Köpekleri, street fighter 2		back street boys, Bodyguard, Alien3, Buffy The Vampire Slayer, Malcolm X, 
+93 Jurassic Park, Schindler's List								
+94 Pulp Fiction, mask, 							Esaretin Bedeli, Forrest Gump, Leon, Fantastik Dörtlü, Aslan Kral, Friends, amazon
+95 Cesur Yürek, Olağan Şüpheliler, 				Se7en, Desperado, Toy Story, Bir Demet Tiyatro
+96 Scream, Görevimiz Tehlike,Beyaz Show 		Eşkıya, Independence Day
+97 Titanic, South Park,							pokemon, age of empires, Men in Black, Contact, Liar Liar, Oz, X-Files
+98 Er Ryan'ı Kurtarmak,	google, 				half life, The Big Lebowski, American History X, The Truman Show, Armageddon, Blade
+99 The Matrix, fight club, 						American Pie, 6. His, Wild Wild West, The sopranos,
+00 Gladiator, X-Men, 							Requiem for a Dream, Final Destination, Scary Movie, Snatch, sahibinden, counter strike
+01 harry potter, The Lord of the Rings, 		Shrek, Planet of the Apes, Hızlı ve Öfkeli, Vizontele
+02 Signs, Ice Age 								Friends, 28 gün sonra,
+03 Kayıp Balık Nemo, Hulk, 						Kill Bill, Battlestar Galactica, Avatar: The Last Airbender
+04 Avrupa Yakası, G.O.R.A, 						Saw, House
+05 lost, Organize İşler, 						Babam ve Oğlum
