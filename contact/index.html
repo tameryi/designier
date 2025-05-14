@@ -82,21 +82,31 @@
         <h1 class="h2 pt-4 pt-lg-5 mt-4 mb-3 mb-lg-4 text-center">Contact Us </h1>
         
         <div class="contact-form w-lg-50 mx-auto p-4 bg-light box-shadow border-radius">
-            <form target="_blank" action="https://formsubmit.co/tamer.yilmaz.07@gmail.com" method="POST">
+            <form target="_blank" action="https://formsubmit.co/tamer@designier.co" method="POST">
+
+              <input type="text" name="_honey" style="display: none;" />
+              
+              <input type="hidden" name="_captcha" value="true" />
+              
+              <input type="hidden" name="_subject" value="New Designier Contact Request" />
+              
               <div class="form-group">
-                <div class="form-row">
-                  <div class="col">
+
+                  <div class="form-group">
                     <input type="text" name="name" class="form-control border-0" placeholder="Full Name" required>
                   </div>
-                  <div class="col">
+                  <div class="form-group">
                     <input type="email" name="email" class="form-control border-0" placeholder="Email Address" required>
                   </div>
-                </div>
+                  <div class="form-group">
+                    <input type="tel" name="phone" class="form-control border-0" placeholder="Phone Number" required>
+                  </div>
+
               </div>
               <div class="form-group">
                 <textarea placeholder="Your Message" class="form-control border-0" name="message" rows="10" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">Submit Form</button>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
             </form>
 
         </div>
