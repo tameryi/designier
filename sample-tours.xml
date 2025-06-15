@@ -70,7 +70,7 @@
   <!-- 5: Barcelona -->
   <Tour>
     <ID>5</ID>
-    <Title>Barcelona Beaches & Culture</Title>
+    <Title>Barcelona Beaches &amp; Culture</Title>
     <Description>Sagrada Familia, Park Güell, and Mediterranean beaches.</Description>
     <StartDate>2025-07-20</StartDate>
     <EndDate>2025-07-25</EndDate>
