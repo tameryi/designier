@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<Tours>
+  <Tour>
+    <ID>1</ID>
+    <Title>Rome Getaway</Title>
+    <Description>3 nights in Rome including Colosseum and Vatican tours.</Description>
+    <StartDate>2025-07-10</StartDate>
+    <EndDate>2025-07-13</EndDate>
+    <Price currency="EUR">499</Price>
+    <ImageGallery>
+      <ImageURL>https://source.unsplash.com/800x600/?rome</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?vatican</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?colosseum</ImageURL>
+    </ImageGallery>
+    <Category>Europe</Category>
+    <Destination>Rome</Destination>
+  </Tour>
+  <Tour>
+    <ID>2</ID>
+    <Title>Cappadocia Hot Air Balloon</Title>
+    <Description>2 nights in Cappadocia with balloon tour and cave hotel stay.</Description>
+    <StartDate>2025-09-05</StartDate>
+    <EndDate>2025-09-07</EndDate>
+    <Price currency="TRY">8999</Price>
+    <ImageGallery>
+      <ImageURL>https://source.unsplash.com/800x600/?cappadocia</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?hot-air-balloon</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?turkey</ImageURL>
+    </ImageGallery>
+    <Category>Turkey</Category>
+    <Destination>Cappadocia</Destination>
+  </Tour>
+  <Tour>
+    <ID>3</ID>
+    <Title>Paris City Lights</Title>
+    <Description>Explore the Eiffel Tower, Louvre, and Seine river cruise.</Description>
+    <StartDate>2025-08-01</StartDate>
+    <EndDate>2025-08-05</EndDate>
+    <Price currency="EUR">750</Price>
+    <ImageGallery>
+      <ImageURL>https://source.unsplash.com/800x600/?paris</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?eiffel-tower</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?louvre</ImageURL>
+    </ImageGallery>
+    <Category>Europe</Category>
+    <Destination>Paris</Destination>
+  </Tour>
+  <Tour>
+    <ID>4</ID>
+    <Title>Istanbul Heritage Tour</Title>
+    <Description>Discover Hagia Sophia, Blue Mosque, and Bosphorus cruise.</Description>
+    <StartDate>2025-10-10</StartDate>
+    <EndDate>2025-10-13</EndDate>
+    <Price currency="TRY">4500</Price>
+    <ImageGallery>
+      <ImageURL>https://source.unsplash.com/800x600/?istanbul</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?hagia-sophia</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?bosphorus</ImageURL>
+    </ImageGallery>
+    <Category>Turkey</Category>
+    <Destination>Istanbul</Destination>
+  </Tour>
+  <Tour>
+    <ID>5</ID>
+    <Title>Barcelona Beaches &amp; Culture</Title>
+    <Description>Sagrada Familia, Park Güell, and Mediterranean beaches.</Description>
+    <StartDate>2025-07-20</StartDate>
+    <EndDate>2025-07-25</EndDate>
+    <Price currency="EUR">620</Price>
+    <ImageGallery>
+      <ImageURL>https://source.unsplash.com/800x600/?barcelona</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?sagrada-familia</ImageURL>
+      <ImageURL>https://source.unsplash.com/800x600/?park-guell</ImageURL>
+    </ImageGallery>
+    <Category>Europe</Category>
+    <Destination>Barcelona</Destination>
+  </Tour>
+</Tours>
