@@ -25,3 +25,47 @@ html, body { scroll-behavior: smooth; }
 }
 
 
+/* Shimmering animated border utility */
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.shimmer-border {
+  --radius: 16px;
+  --thickness: 2px;
+  --duration: 8s;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.shimmer-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: var(--thickness);
+  border-radius: inherit;
+  background: conic-gradient(from var(--angle),
+    transparent 0deg 12deg,
+    rgba(255,255,255,0.85) 18deg 36deg,
+    transparent 48deg 360deg);
+  /* Hollow out the center so inner content remains solid */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+  animation: spin var(--duration) linear infinite;
+}
+
+@keyframes spin {
+  to { --angle: 360deg; }
+}
+
