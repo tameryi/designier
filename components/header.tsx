@@ -35,9 +35,9 @@ export function Header() {
         </Link>
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm text-gray-200">
-          <a href="#portfolio" className="hover:text-white">Portfolio</a>
-          <a href="#about" className="hover:text-white">About</a>
-          <a href="#contact" className="hover:bg-white hover:text-black btn btn-outline">Contact</a>
+          <Link href="/#portfolio" className="hover:text-white">Portfolio</Link>
+          <Link href="/#about" className="hover:text-white">About</Link>
+          <Link href="/#contact" className="hover:bg-white hover:text-black btn btn-outline">Contact</Link>
         </nav>
         {/* Mobile toggle */}
         <button
@@ -88,13 +88,13 @@ export function Header() {
             <div className="container py-4">
               <ul className="flex flex-col gap-2 text-base text-gray-200">
                 <li>
-                  <a href="#portfolio" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>Portfolio</a>
+                  <Link href="/#portfolio" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
                 </li>
                 <li>
-                  <a href="#about" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>About</a>
+                  <Link href="/#about" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>About</Link>
                 </li>
                 <li>
-                  <a href="#contact" className="block rounded-lg px-3 py-2 btn btn-outline hover:bg-[#F683AC]" onClick={() => setIsMenuOpen(false)}>Contact</a>
+                  <Link href="/#contact" className="block rounded-lg px-3 py-2 btn btn-outline hover:bg-[#F683AC]" onClick={() => setIsMenuOpen(false)}>Contact</Link>
                 </li>
               </ul>
             </div>
