@@ -11,7 +11,7 @@ export function Hero() {
         </p>
         <div className="mt-8 flex items-center justify-center gap-4">
           <a href="#portfolio" className="btn btn-primary">View Portfolio</a>
-          <a href="#contact" className="btn btn-outline hover:bg-purple-700">Let’s Work Together</a>
+          <a href="#contact" className="btn btn-outline hover:bg-white hover:text-black">Let’s Work Together</a>
         </div>
       </div>
     </section>

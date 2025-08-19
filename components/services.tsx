@@ -26,7 +26,7 @@ export function Services() {
               <AirplaneTilt size={24} className="text-white" />
               <h3 className="text-lg font-medium text-white">Travel Tech Expertise</h3>
             </div>
-            <p className="mt-2 text-gray-300">Specialized in flight, hotel, and booking platforms — from search to checkout.</p>
+            <p className="mt-2 text-gray-300">Specialized in flight, hotel, and booking platforms, from search to checkout.</p>
           </div>
           <div className="shimmer-border card p-6">
             <div className="flex items-center gap-3">

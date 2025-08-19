@@ -15,7 +15,7 @@ type Work = {
 
 const works: Record<WorkSlug, Work> = {
   rafeef: {
-    title: 'Rafeef B2C',
+    title: 'Rafeef Travel',
     role: 'Frontend Development',
     industry: 'Travel',
     challenge:

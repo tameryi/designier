@@ -2,7 +2,7 @@ import { CaseStudyCard } from '@/components/case-study-card'
 
 const CASE_STUDIES = [
   {
-    title: 'Rafeef B2C',
+    title: 'Rafeef Travel',
     slug: 'rafeef',
     role: 'Frontend Development',
     industry: 'Travel',
@@ -21,7 +21,7 @@ const CASE_STUDIES = [
     title: 'Lobier AI',
     slug: 'lobier',
     role: 'Design & React Development',
-    industry: 'Travel / AI',
+    industry: 'SaaS / AI',
     description: 'Designed and developed an AI chatbot interface for hotels.',
     image: '/images/lobier.svg',
   },

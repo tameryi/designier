@@ -6,7 +6,7 @@ export function Contact() {
   return (
     <section id="contact" className="section container">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center">
+        <div className="md:text-center">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">Let’s Talk</h2>
           <p className="text-gray-300 mt-4">
             Interested in working together? <br />I’m available for remote roles and freelance projects worldwide, with

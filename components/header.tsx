@@ -37,7 +37,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm text-gray-200">
           <a href="#portfolio" className="hover:text-white">Portfolio</a>
           <a href="#about" className="hover:text-white">About</a>
-          <a href="#contact" className="hover:bg-[#F683AC] btn btn-outline">Contact</a>
+          <a href="#contact" className="hover:bg-white hover:text-black btn btn-outline">Contact</a>
         </nav>
         {/* Mobile toggle */}
         <button

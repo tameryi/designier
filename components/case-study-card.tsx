@@ -17,7 +17,7 @@ export function CaseStudyCard({ title, slug, role, industry, description, image 
         <Image src={image} alt={title} width={1200} height={900} className="w-full h-auto transition-transform group-hover:scale-[1.01]" />
         <div className="p-5">
           <h3 className="text-lg font-semibold text-white">{title}</h3>
-          <p className="text-sm text-gray-300 mt-1">Role: {role} · Industry: {industry}</p>
+          <p className="text-sm text-gray-300 mt-1">Role: <span className="text-gray-100">{role}</span> · Industry: <span className="text-gray-100">{industry}</span></p>
           <p className="text-gray-300 mt-3">{description}</p>
         </div>
       </div>
