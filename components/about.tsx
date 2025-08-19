@@ -1,7 +1,7 @@
 export function About() {
   return (
-    <section id="about" className="section">
-      <div className="container max-w-3xl">
+    <section id="about" className="section container">
+      <div className="max-w-3xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center text-white">About</h2>
         <p className="mt-6 text-gray-300 text-lg leading-relaxed">
           I’m Tamer, a designer and frontend developer with over 15 years of experience helping businesses bring ideas

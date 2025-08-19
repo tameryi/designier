@@ -10,6 +10,20 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          'var(--font-bricolage)',
+          'ui-sans-serif',
+          'system-ui',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'Noto Sans',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+        ],
+      },
       colors: {
         background: '#0a0a0a',
         foreground: '#fafafa',
