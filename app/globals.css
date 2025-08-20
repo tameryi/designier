@@ -49,7 +49,7 @@ html, body { scroll-behavior: smooth; }
   border-radius: inherit;
   background: conic-gradient(from var(--angle),
     transparent 0deg 12deg,
-    rgba(255,255,255,0.85) 18deg 36deg,
+    rgba(255,255,255,0.25) 18deg 36deg,
     transparent 48deg 360deg);
   /* Hollow out the center so inner content remains solid */
   -webkit-mask:
@@ -67,5 +67,47 @@ html, body { scroll-behavior: smooth; }
 
 @keyframes spin {
   to { --angle: 360deg; }
+}
+
+
+/* Marquee utility */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  --fade-size: 64px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000  var(--fade-size),
+    #000  calc(100% - var(--fade-size)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000  var(--fade-size),
+    #000  calc(100% - var(--fade-size)),
+    transparent 100%
+  );
+}
+
+.marquee__track {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: marquee-left var(--marquee-duration, 28s) linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
 }
 

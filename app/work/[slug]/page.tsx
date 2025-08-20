@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
-type WorkSlug = 'rafeef' | 'bilyoner' | 'lobier'
+type WorkSlug = 'fibula' | 'bilyoner' | 'lobier'
 
 type Work = {
   title: string
@@ -14,17 +14,17 @@ type Work = {
 }
 
 const works: Record<WorkSlug, Work> = {
-  rafeef: {
-    title: 'Rafeef Travel',
-    role: 'Frontend Development',
+  fibula: {
+    title: 'Fibula',
+    role: 'Design & Frontend Development',
     industry: 'Travel',
     challenge:
-      'Rafeef needed a modern B2C travel platform with complex booking flows for flights and hotels.',
+      'Fibula needed a modern B2C travel platform with complex booking flows for flights and hotels.',
     solution:
-      'I developed the frontend using React, ensuring smooth integration with backend APIs. The focus was on speed, usability, and a clean UI that makes travel booking simple.',
+      'I designed and developed the frontend using React, ensuring smooth integration with backend APIs. The focus was on speed, usability, and a clean UI that makes travel booking simple.',
     result:
       'The platform launched successfully, offering customers a seamless booking experience and improving overall conversions.',
-    image: '/images/rafeef.svg',
+    image: '/images/fibula1.webp',
   },
   bilyoner: {
     title: 'Bilyoner',
@@ -36,19 +36,19 @@ const works: Record<WorkSlug, Work> = {
       'I converted Figma designs into responsive, production-ready code, with attention to detail and performance.',
     result:
       'The updated frontend improved user experience, with faster load times and a polished UI across devices.',
-    image: '/images/bilyoner.svg',
+    image: '/images/bilyoner1.webp',
   },
   lobier: {
     title: 'Lobier AI',
     role: 'Design & React Development',
-    industry: 'Travel / AI',
+    industry: 'SaaS / AI',
     challenge:
       'Hotels needed a way to provide 24/7 guest engagement and booking support.',
     solution:
       'I designed the interface, created marketing visuals, and developed the frontend in React. The chatbot was designed to be simple, friendly, and easy to integrate.',
     result:
       'Lobier AI is now being tested with boutique hotels, providing real-time guest support and increasing direct bookings.',
-    image: '/images/lobier.svg',
+    image: '/images/lobier1.webp',
   },
 }
 
