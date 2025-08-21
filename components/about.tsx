@@ -5,7 +5,7 @@ export function About() {
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-left md:text-center text-white">About</h2>
         <p className="mt-6 text-gray-300 text-lg leading-relaxed">
           I’m <span className="inline-flex border border-white/20 rounded-lg px-1.5">Tamer</span>, a designer and frontend developer with over 15 years of experience helping businesses bring ideas
-          to life. I specialize in UI/UX <span className="inline-flex border border-white/20 rounded-lg px-1.5">design</span> and Frontend <span className="inline-flex border border-white/20 rounded-lg px-1.5">development</span>, with a strong focus on SaaS products and
+          to life. I specialize in <span className="inline-flex border border-white/20 rounded-lg px-1.5">UI/UX Design</span> and <span className="inline-flex border border-white/20 rounded-lg px-1.5">Frontend Development</span> with a strong focus on SaaS products and
           Travel Tech platforms. Based in Turkey, I work remotely across Europe and align easily with <span className="inline-flex border border-white/20 rounded-lg px-1.5">CET/EET</span> time
           zones. My approach is simple: clear communication, fast delivery, and designs that not only look great but
           also work seamlessly.
