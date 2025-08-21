@@ -11,6 +11,10 @@ type Work = {
   solution: string
   result: string
   image: string
+  portfolioImages?: Array<{
+    src: string
+    wide: boolean
+  }>
 }
 
 const works: Record<WorkSlug, Work> = {
@@ -24,7 +28,14 @@ const works: Record<WorkSlug, Work> = {
       'I designed and developed the frontend using React, ensuring smooth integration with backend APIs. The focus was on speed, usability, and a clean UI that makes travel booking simple.',
     result:
       'The platform launched successfully, offering customers a seamless booking experience and improving overall conversions.',
-    image: '/images/fibula1.webp',
+    image: '/images/fibula-p.jpg',
+    portfolioImages: [
+      { src: '/images/fibula-p1.jpg', wide: true },
+      { src: '/images/fibula-p2.jpg', wide: false },
+      { src: '/images/fibula-p3.jpg', wide: false },
+      { src: '/images/fibula-p4.jpg', wide: true },
+      { src: '/images/fibula-p5.jpg', wide: true },
+    ],
   },
   bilyoner: {
     title: 'Bilyoner',
@@ -37,6 +48,16 @@ const works: Record<WorkSlug, Work> = {
     result:
       'The updated frontend improved user experience, with faster load times and a polished UI across devices.',
     image: '/images/bilyoner1.webp',
+    portfolioImages: [
+      { src: '/images/bilyoner1.jpg', wide: true },
+      { src: '/images/bilyoner2.png', wide: false },
+      { src: '/images/bilyoner4.png', wide: false },
+      { src: '/images/bilyoner3.jpg', wide: true },
+      { src: '/images/bilyoner5.jpg', wide: true },
+      { src: '/images/bilyoner9.png', wide: false },
+      { src: '/images/bilyoner8.png', wide: false },
+      { src: '/images/bilyoner7.jpg', wide: true },
+    ],
   },
   lobier: {
     title: 'Lobier AI',
@@ -49,6 +70,15 @@ const works: Record<WorkSlug, Work> = {
     result:
       'Lobier AI is now being tested with boutique hotels, providing real-time guest support and increasing direct bookings.',
     image: '/images/lobier1.webp',
+    portfolioImages: [
+      { src: '/images/lobier7.jpg', wide: true },
+      { src: '/images/lobier3.png', wide: false },
+      { src: '/images/lobier5.png', wide: false },
+      { src: '/images/lobier8.png', wide: true },
+      { src: '/images/lobier2.jpg', wide: true },
+      { src: '/images/lobier6.png', wide: false },
+      { src: '/images/lobier4.png', wide: true },
+    ],
   },
 }
 
@@ -67,34 +97,68 @@ export function generateMetadata({ params }: { params: { slug: WorkSlug } }): Me
 export default function WorkDetailPage({ params }: { params: { slug: WorkSlug } }) {
   const work = works[params.slug]
   return (
-    <section className="section">
-      <div className="container">
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">{work.title}</h1>
-          <p className="text-sm text-gray-300 mt-2">Role: {work.role} · Industry: {work.industry}</p>
-        </div>
+    <>
+      <section className="section">
+        <div className="container">
+          <div className="mb-8">
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">{work.title}</h1>
+            <p className="text-sm text-gray-300 mt-2">Role: {work.role} · Industry: {work.industry}</p>
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          <div className="space-y-6">
-            <div className="card p-6">
-              <h2 className="text-xl font-medium text-white">Challenge</h2>
-              <p className="text-gray-300 mt-2">{work.challenge}</p>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="space-y-6">
+              <div className="card p-6">
+                <h2 className="text-xl font-medium text-white">Challenge</h2>
+                <p className="text-gray-300 mt-2">{work.challenge}</p>
+              </div>
+              <div className="card p-6">
+                <h2 className="text-xl font-medium text-white">Solution</h2>
+                <p className="text-gray-300 mt-2">{work.solution}</p>
+              </div>
+              <div className="card p-6">
+                <h2 className="text-xl font-medium text-white">Result</h2>
+                <p className="text-gray-300 mt-2">{work.result}</p>
+              </div>
             </div>
-            <div className="card p-6">
-              <h2 className="text-xl font-medium text-white">Solution</h2>
-              <p className="text-gray-300 mt-2">{work.solution}</p>
+            <div className="card overflow-hidden">
+              <Image src={work.image} alt={work.title} width={1200} height={900} className="w-full h-full object-cover" />
             </div>
-            <div className="card p-6">
-              <h2 className="text-xl font-medium text-white">Result</h2>
-              <p className="text-gray-300 mt-2">{work.result}</p>
-            </div>
-          </div>
-          <div className="card overflow-hidden">
-            <Image src={work.image} alt={work.title} width={1200} height={900} className="w-full h-auto" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {work.portfolioImages && work.portfolioImages.length > 0 && (
+        <section className="section bg-gray-900/50">
+          <div className="container">
+            <div className="mb-8">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">Portfolio</h2>
+              <p className="text-gray-300 mt-2">A showcase of the design and development work</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {work.portfolioImages.map((image, index) => (
+                <div 
+                  key={index} 
+                  className={`overflow-hidden rounded-lg group ${
+                    image.wide ? 'md:col-span-2' : 'md:col-span-1'
+                  }`}
+                >
+                  <div className="relative overflow-hidden">
+                    <Image 
+                      src={image.src} 
+                      alt={`${work.title} portfolio image ${index + 1}`} 
+                      width={800} 
+                      height={600} 
+                      className="w-full h-auto rounded-lg" 
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   )
 }
 
