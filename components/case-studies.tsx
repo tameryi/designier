@@ -15,7 +15,7 @@ const CASE_STUDIES = [
     role: 'Design & Frontend Development',
     industry: 'Travel',
     description: 'Designed and developed the frontend for a modern travel booking platform with flights and hotels.',
-    image: '/images/fibula1.webp',
+    image: '/images/fibula.webp',
   },
   {
     title: 'Bilyoner',
@@ -23,7 +23,7 @@ const CASE_STUDIES = [
     role: 'Frontend Development (Figma to Code)',
     industry: 'Betting / Gaming',
     description: 'Converted Figma designs into responsive, production-ready code.',
-    image: '/images/bilyoner1.webp',
+    image: '/images/bilyoner-p.webp',
   },
 ]
 

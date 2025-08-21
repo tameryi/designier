@@ -13,7 +13,7 @@ type Work = {
   image: string
   portfolioImages?: Array<{
     src: string
-    wide: boolean
+    layout: 'full' | 'four' | 'half' | 'third' // full = 100% width, half = 50% width, third = 33% width
   }>
 }
 
@@ -28,13 +28,13 @@ const works: Record<WorkSlug, Work> = {
       'I designed and developed the frontend using React, ensuring smooth integration with backend APIs. The focus was on speed, usability, and a clean UI that makes travel booking simple.',
     result:
       'The platform launched successfully, offering customers a seamless booking experience and improving overall conversions.',
-    image: '/images/fibula-p.jpg',
+    image: '/images/fibula.webp',
     portfolioImages: [
-      { src: '/images/fibula-p1.jpg', wide: true },
-      { src: '/images/fibula-p2.jpg', wide: false },
-      { src: '/images/fibula-p3.jpg', wide: false },
-      { src: '/images/fibula-p4.jpg', wide: true },
-      { src: '/images/fibula-p5.jpg', wide: true },
+      { src: '/images/fibula-p1.jpg', layout: 'four' }, // 1 full image
+      { src: '/images/fibula-p2.jpg', layout: 'third' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/fibula-p3.jpg', layout: 'third' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/fibula-p4.jpg', layout: 'four' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/fibula-p5.jpg', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
     ],
   },
   bilyoner: {
@@ -47,16 +47,14 @@ const works: Record<WorkSlug, Work> = {
       'I converted Figma designs into responsive, production-ready code, with attention to detail and performance.',
     result:
       'The updated frontend improved user experience, with faster load times and a polished UI across devices.',
-    image: '/images/bilyoner1.webp',
+    image: '/images/bilyoner-p.webp',
     portfolioImages: [
-      { src: '/images/bilyoner1.jpg', wide: true },
-      { src: '/images/bilyoner2.png', wide: false },
-      { src: '/images/bilyoner4.png', wide: false },
-      { src: '/images/bilyoner3.jpg', wide: true },
-      { src: '/images/bilyoner5.jpg', wide: true },
-      { src: '/images/bilyoner9.png', wide: false },
-      { src: '/images/bilyoner8.png', wide: false },
-      { src: '/images/bilyoner7.jpg', wide: true },
+      { src: '/images/bilyoner1.jpg', layout: 'full' }, // 1 full image
+      { src: '/images/bilyoner2.png', layout: 'third' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/bilyoner4.png', layout: 'third' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/bilyoner9.png', layout: 'third' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/bilyoner3.jpg', layout: 'half' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/bilyoner5.jpg', layout: 'half' }, // 1 image - 1 image - 1 image (3 images side by side)
     ],
   },
   lobier: {
@@ -71,13 +69,12 @@ const works: Record<WorkSlug, Work> = {
       'Lobier AI is now being tested with boutique hotels, providing real-time guest support and increasing direct bookings.',
     image: '/images/lobier1.webp',
     portfolioImages: [
-      { src: '/images/lobier7.jpg', wide: true },
-      { src: '/images/lobier3.png', wide: false },
-      { src: '/images/lobier5.png', wide: false },
-      { src: '/images/lobier8.png', wide: true },
-      { src: '/images/lobier2.jpg', wide: true },
-      { src: '/images/lobier6.png', wide: false },
-      { src: '/images/lobier4.png', wide: true },
+      { src: '/images/lobier7.jpg', layout: 'full' }, // 1 full image
+      { src: '/images/lobier2.jpg', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/lobier3.png', layout: 'third' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/lobier5.png', layout: 'third' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/lobier6.png', layout: 'third' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/lobier8.png', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
     ],
   },
 }
@@ -135,25 +132,37 @@ export default function WorkDetailPage({ params }: { params: { slug: WorkSlug } 
               <p className="text-gray-300 mt-2">A showcase of the design and development work</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-              {work.portfolioImages.map((image, index) => (
-                <div 
-                  key={index} 
-                  className={`overflow-hidden rounded-lg group ${
-                    image.wide ? 'md:col-span-2' : 'md:col-span-1'
-                  }`}
-                >
-                  <div className="relative overflow-hidden">
-                    <Image 
-                      src={image.src} 
-                      alt={`${work.title} portfolio image ${index + 1}`} 
-                      width={800} 
-                      height={600} 
-                      className="w-full h-auto rounded-lg" 
-                    />
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-10">
+              {work.portfolioImages.map((image, index) => {
+                let colSpan = 'md:col-span-1';
+                
+                if (image.layout === 'full') {
+                  colSpan = 'md:col-span-6';
+                } else if (image.layout === 'four') {
+                  colSpan = 'md:col-span-4'; 
+                } else if (image.layout === 'half') {
+                  colSpan = 'md:col-span-3'; 
+                } else if (image.layout === 'third') {
+                  colSpan = 'md:col-span-2';
+                }
+                
+                return (
+                  <div 
+                    key={index} 
+                    className={`overflow-hidden rounded-lg group ${colSpan}`}
+                  >
+                    <div className="relative overflow-hidden">
+                      <Image 
+                        src={image.src} 
+                        alt={`${work.title} portfolio image ${index + 1}`} 
+                        width={800} 
+                        height={600} 
+                        className="w-full h-auto rounded-lg" 
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
