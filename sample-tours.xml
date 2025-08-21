@@ -1,0 +1,171 @@
+<Tours>
+  <!-- 1: Rome -->
+  <Tour>
+    <ID>1</ID>
+    <Title>Rome Getaway</Title>
+    <Description>3 nights in Rome including Colosseum and Vatican tours.</Description>
+    <StartDate>2025-07-10</StartDate>
+    <EndDate>2025-07-13</EndDate>
+    <Price currency="EUR">499</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1543340713-9bc55bf1a38e</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1587496679740-20fc035f02f2</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1510547033484-0434e55da4f0</ImageURL>
+    </ImageGallery>
+    <Category>Europe</Category>
+    <Destination>Rome</Destination>
+  </Tour>
+
+  <!-- 2: Cappadocia -->
+  <Tour>
+    <ID>2</ID>
+    <Title>Cappadocia Hot Air Balloon</Title>
+    <Description>2 nights in Cappadocia with balloon tour and cave hotel stay.</Description>
+    <StartDate>2025-09-05</StartDate>
+    <EndDate>2025-09-07</EndDate>
+    <Price currency="TRY">8999</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1506021712457-610a8248cd3c</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1477587458883-47145ed94245</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1493244040629-496f6d136cc4</ImageURL>
+    </ImageGallery>
+    <Category>Turkey</Category>
+    <Destination>Cappadocia</Destination>
+  </Tour>
+
+  <!-- 3: Paris -->
+  <Tour>
+    <ID>3</ID>
+    <Title>Paris City Lights</Title>
+    <Description>Explore the Eiffel Tower, Louvre, and Seine river cruise.</Description>
+    <StartDate>2025-08-01</StartDate>
+    <EndDate>2025-08-05</EndDate>
+    <Price currency="EUR">750</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1502602898657-3e91760cbb34</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1472214103451-9374bd1c798e</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1511739001486-6bfe10ce785f</ImageURL>
+    </ImageGallery>
+    <Category>Europe</Category>
+    <Destination>Paris</Destination>
+  </Tour>
+
+  <!-- 4: Istanbul -->
+  <Tour>
+    <ID>4</ID>
+    <Title>Istanbul Heritage Tour</Title>
+    <Description>Discover Hagia Sophia, Blue Mosque, and Bosphorus cruise.</Description>
+    <StartDate>2025-10-10</StartDate>
+    <EndDate>2025-10-13</EndDate>
+    <Price currency="TRY">4500</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1521302080889-0e7e556b7fe3</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1496747616049-c0f96a0d5fb2</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1557214451-7c4d65c988d7</ImageURL>
+    </ImageGallery>
+    <Category>Turkey</Category>
+    <Destination>Istanbul</Destination>
+  </Tour>
+
+  <!-- 5: Barcelona -->
+  <Tour>
+    <ID>5</ID>
+    <Title>Barcelona Beaches &amp; Culture</Title>
+    <Description>Sagrada Familia, Park Güell, and Mediterranean beaches.</Description>
+    <StartDate>2025-07-20</StartDate>
+    <EndDate>2025-07-25</EndDate>
+    <Price currency="EUR">620</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1508025791470-02eaa31a3e7b</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1494013037097-0356479bdab9</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1496722269816-1ec08068b588</ImageURL>
+    </ImageGallery>
+    <Category>Europe</Category>
+    <Destination>Barcelona</Destination>
+  </Tour>
+
+  <!-- 6: London -->
+  <Tour>
+    <ID>6</ID>
+    <Title>London Historic Highlights</Title>
+    <Description>Visit the Tower of London, Buckingham Palace, and Thames cruise.</Description>
+    <StartDate>2025-09-15</StartDate>
+    <EndDate>2025-09-19</EndDate>
+    <Price currency="GBP">650</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1508556497402-7aa6a5aee7b3</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1457264635001-828d42f675cd</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1467269204594-9661b134dd2b</ImageURL>
+    </ImageGallery>
+    <Category>Europe</Category>
+    <Destination>London</Destination>
+  </Tour>
+
+  <!-- 7: Athens -->
+  <Tour>
+    <ID>7</ID>
+    <Title>Athens Ancient Wonders</Title>
+    <Description>Discover the Acropolis and old town of Plaka.</Description>
+    <StartDate>2025-08-12</StartDate>
+    <EndDate>2025-08-15</EndDate>
+    <Price currency="EUR">550</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1465547724842-756fead28fb6</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1519345182560-3f2917c472ef</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1494690650203-b60b43a28aa0</ImageURL>
+    </ImageGallery>
+    <Category>Europe</Category>
+    <Destination>Athens</Destination>
+  </Tour>
+
+  <!-- 8: Dubai -->
+  <Tour>
+    <ID>8</ID>
+    <Title>Dubai Luxury Escape</Title>
+    <Description>Experience the Burj Khalifa, desert safari, and luxury malls.</Description>
+    <StartDate>2025-11-01</StartDate>
+    <EndDate>2025-11-05</EndDate>
+    <Price currency="AED">2800</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1542744173-8e7e53415bb0</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1514119415848-79d2521f06b6</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1540959733332-3cc3bb3f50ce</ImageURL>
+    </ImageGallery>
+    <Category>Middle East</Category>
+    <Destination>Dubai</Destination>
+  </Tour>
+
+  <!-- 9: Tokyo -->
+  <Tour>
+    <ID>9</ID>
+    <Title>Tokyo Urban Adventure</Title>
+    <Description>Explore Shibuya, Tokyo Tower, and traditional temples.</Description>
+    <StartDate>2025-10-20</StartDate>
+    <EndDate>2025-10-24</EndDate>
+    <Price currency="JPY">90000</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1506330905903-e02199ae52b8</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1562665731-a962033f207f</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1549692520-acc6669e2f0c</ImageURL>
+    </ImageGallery>
+    <Category>Asia</Category>
+    <Destination>Tokyo</Destination>
+  </Tour>
+
+  <!-- 10: Sydney -->
+  <Tour>
+    <ID>10</ID>
+    <Title>Sydney Highlights</Title>
+    <Description>Visit the Opera House, Harbour Bridge, and Bondi Beach.</Description>
+    <StartDate>2025-12-05</StartDate>
+    <EndDate>2025-12-10</EndDate>
+    <Price currency="AUD">1200</Price>
+    <ImageGallery>
+      <ImageURL>https://images.unsplash.com/photo-1507525428034-b723cf961d3e</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1535914254209-de68a8ee0548</ImageURL>
+      <ImageURL>https://images.unsplash.com/photo-1517292987719-0369a794ec0f</ImageURL>
+    </ImageGallery>
+    <Category>Oceania</Category>
+    <Destination>Sydney</Destination>
+  </Tour>
+</Tours>
