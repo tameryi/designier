@@ -111,3 +111,50 @@ html, body { scroll-behavior: smooth; }
   }
 }
 
+/* Animasyonlanabilir custom props tanımları */
+@property --x1 { syntax: "<percentage>"; inherits: false; initial-value: 20%; }
+@property --y1 { syntax: "<percentage>"; inherits: false; initial-value: 30%; }
+@property --x2 { syntax: "<percentage>"; inherits: false; initial-value: 80%; }
+@property --y2 { syntax: "<percentage>"; inherits: false; initial-value: 20%; }
+@property --x3 { syntax: "<percentage>"; inherits: false; initial-value: 60%; }
+@property --y3 { syntax: "<percentage>"; inherits: false; initial-value: 70%; }
+
+.hero-blob{
+  position:absolute;
+  inset:-18% -8% -6% -8%;             /* görünür alanı biraz büyütelim */
+  /* gradient merkezleri artık değişkenlere bağlı */
+  background:
+    radial-gradient(40% 40% at var(--x1) var(--y1), rgba(255, 0, 128, .28), transparent 60%),
+    radial-gradient(45% 45% at var(--x2) var(--y2), rgba(83, 126, 255, .26), transparent 60%),
+    radial-gradient(50% 50% at var(--x3) var(--y3), rgba(255, 120, 60, .22), transparent 60%);
+  filter: blur(44px) saturate(120%);
+  will-change: transform, background-position, filter;
+  animation: blob-move 12s ease-in-out infinite;
+}
+
+/* İç hareket: merkezleri gezdir + biraz scale/translate */
+@keyframes blob-move {
+  0% {
+    --x1:20%; --y1:30%;
+    --x2:78%; --y2:22%;
+    --x3:60%; --y3:70%;
+    transform: translate3d(0, 0, 0) scale(1.00);
+  }
+  50% {
+    --x1:27%; --y1:36%;
+    --x2:73%; --y2:26%;
+    --x3:64%; --y3:66%;
+    transform: translate3d(0, -3%, 0) scale(1.06);
+  }
+  100% {
+    --x1:22%; --y1:32%;
+    --x2:76%; --y2:24%;
+    --x3:58%; --y3:72%;
+    transform: translate3d(0, 2.5%, 0) scale(1.03);
+  }
+}
+
+/* Hareketi fazla bulanlar için erişilebilirlik */
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob { animation: none; }
+}

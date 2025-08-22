@@ -5,6 +5,7 @@ import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import CursorTrail from '@/components/cursor-trail'
+import MagneticButton from '@/components/magnetic-button'
 
 export const metadata: Metadata = {
   title: 'Designier – UI/UX Design & Frontend Development',
