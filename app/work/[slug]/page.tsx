@@ -135,18 +135,18 @@ export default function WorkDetailPage({ params }: { params: { slug: WorkSlug } 
               <p className="text-gray-300 mt-2">A showcase of the design and development work</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-10">
+            <div className="grid grid-cols-6 gap-10">
               {work.portfolioImages.map((image, index) => {
                 let colSpan = 'md:col-span-1';
                 
                 if (image.layout === 'full') {
-                  colSpan = 'md:col-span-6';
+                  colSpan = 'col-span-6';
                 } else if (image.layout === 'four') {
-                  colSpan = 'md:col-span-4'; 
+                  colSpan = 'col-span-4'; 
                 } else if (image.layout === 'half') {
-                  colSpan = 'md:col-span-3'; 
+                  colSpan = 'col-span-3'; 
                 } else if (image.layout === 'third') {
-                  colSpan = 'md:col-span-2';
+                  colSpan = 'col-span-2';
                 }
                 
                 return (
