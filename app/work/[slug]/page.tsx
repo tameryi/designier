@@ -14,6 +14,7 @@ type Work = {
   portfolioImages?: Array<{
     src: string
     layout: 'full' | 'four' | 'half' | 'third' // full = 100% width, half = 50% width, third = 33% width
+    customClass?: string
   }>
 }
 
@@ -30,11 +31,12 @@ const works: Record<WorkSlug, Work> = {
       'The platform launched successfully, offering customers a seamless booking experience and improving overall conversions.',
     image: '/images/fibula.webp',
     portfolioImages: [
-      { src: '/images/fibula-p1.jpg', layout: 'four' }, // 1 full image
-      { src: '/images/fibula-p2.jpg', layout: 'third' }, // 1 half - 1 half (2 images side by side)
-      { src: '/images/fibula-p3.jpg', layout: 'third' }, // 1 half - 1 half (2 images side by side)
-      { src: '/images/fibula-p4.jpg', layout: 'four' }, // 1 image - 1 image - 1 image (3 images side by side)
-      { src: '/images/fibula-p5.jpg', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/fibula-d1.webp', layout: 'full' }, // 1 full image
+      { src: '/images/fibula-m1.png', layout: 'third', customClass: 'rounded-2xl border border-white/10' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/fibula-m2.png', layout: 'third', customClass: 'rounded-2xl border border-white/10' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/fibula-m3.png', layout: 'third', customClass: 'rounded-2xl border border-white/10' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/fibula-d2.webp', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/fibula-d3.webp', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
     ],
   },
   bilyoner: {
@@ -69,12 +71,13 @@ const works: Record<WorkSlug, Work> = {
       'Lobier AI is now being tested with boutique hotels, providing real-time guest support and increasing direct bookings.',
     image: '/images/lobier1.webp',
     portfolioImages: [
-      { src: '/images/lobier7.jpg', layout: 'full' }, // 1 full image
+      { src: '/images/lobier-d1.png', layout: 'full' }, // 1 full image
+      { src: '/images/lobier3.png', layout: 'third', customClass: 'rounded-2xl' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/lobier9.png', layout: 'third', customClass: 'rounded-2xl border border-white/10' }, // 1 half - 1 half (2 images side by side)
+      { src: '/images/lobier5.png', layout: 'third', customClass: 'rounded-2xl border border-white/10' }, // 1 half - 1 half (2 images side by side)
       { src: '/images/lobier2.jpg', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
-      { src: '/images/lobier3.png', layout: 'third' }, // 1 half - 1 half (2 images side by side)
-      { src: '/images/lobier5.png', layout: 'third' }, // 1 half - 1 half (2 images side by side)
-      { src: '/images/lobier6.png', layout: 'third' }, // 1 image - 1 image - 1 image (3 images side by side)
-      { src: '/images/lobier8.png', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/lobier6.png', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/lobier-d2.png', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
     ],
   },
 }
@@ -151,13 +154,13 @@ export default function WorkDetailPage({ params }: { params: { slug: WorkSlug } 
                     key={index} 
                     className={`overflow-hidden rounded-lg group ${colSpan}`}
                   >
-                    <div className="relative overflow-hidden">
+                    <div className="relative overflow-hidden rounded-2xl">
                       <Image 
                         src={image.src} 
                         alt={`${work.title} portfolio image ${index + 1}`} 
                         width={800} 
                         height={600} 
-                        className="w-full h-auto rounded-lg" 
+                        className={`w-full h-auto rounded-lg ${image.customClass}`} 
                       />
                     </div>
                   </div>
