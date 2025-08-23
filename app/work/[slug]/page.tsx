@@ -86,16 +86,18 @@ export function generateStaticParams(): { slug: WorkSlug }[] {
   return Object.keys(works).map((key) => ({ slug: key as WorkSlug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: WorkSlug } }): Metadata {
-  const work = works[params.slug]
+export async function generateMetadata({ params }: { params: Promise<{ slug: WorkSlug }> }): Promise<Metadata> {
+  const { slug } = await params
+  const work = works[slug]
   return {
     title: `${work.title} – Designier`,
     description: `${work.title}: ${work.role} for ${work.industry}. ${work.challenge}`,
   }
 }
 
-export default function WorkDetailPage({ params }: { params: { slug: WorkSlug } }) {
-  const work = works[params.slug]
+export default async function WorkDetailPage({ params }: { params: Promise<{ slug: WorkSlug }> }) {
+  const { slug } = await params
+  const work = works[slug]
   return (
     <>
       <section className="section">
