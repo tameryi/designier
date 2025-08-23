@@ -1,6 +1,6 @@
 export function ContactForm() {
   return (
-    <form className="gradient-bg rounded-xl p-6 grid gap-4" target="_blank" action="https://formsubmit.co/designierco@gmail.com" method="POST">
+    <form className="gradient-bg rounded-xl p-6 grid gap-4 w-full" target="_blank" action="https://formsubmit.co/designierco@gmail.com" method="POST">
 
       <input type="text" name="_honey" style={{ display: 'none' }} />
 
