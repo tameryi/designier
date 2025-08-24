@@ -125,11 +125,11 @@ html, body { scroll-behavior: smooth; }
   /* gradient merkezleri artık değişkenlere bağlı */
   background:
     radial-gradient(40% 40% at var(--x1) var(--y1), rgba(255, 0, 128, .28), transparent 60%),
-    radial-gradient(45% 45% at var(--x2) var(--y2), rgba(83, 126, 255, .26), transparent 60%),
-    radial-gradient(50% 50% at var(--x3) var(--y3), rgba(255, 120, 60, .22), transparent 60%);
+    radial-gradient(45% 45% at var(--x2) var(--y2), rgba(83, 126, 255, .26), transparent 60%);
   filter: blur(44px) saturate(120%);
   will-change: transform, background-position, filter;
-  animation: blob-move 12s ease-in-out infinite;
+  animation: blob-move 15s ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 /* İç hareket: merkezleri gezdir + biraz scale/translate */
@@ -137,20 +137,17 @@ html, body { scroll-behavior: smooth; }
   0% {
     --x1:20%; --y1:30%;
     --x2:78%; --y2:22%;
-    --x3:60%; --y3:70%;
     transform: translate3d(0, 0, 0) scale(1.00);
   }
   50% {
-    --x1:27%; --y1:36%;
-    --x2:73%; --y2:26%;
-    --x3:64%; --y3:66%;
-    transform: translate3d(0, -3%, 0) scale(1.06);
+    --x1:80%; --y1:36%;
+    --x2:23%; --y2:26%;
+    transform: translate3d(0, 4%, 0) scale(1.12);
   }
   100% {
     --x1:22%; --y1:32%;
     --x2:76%; --y2:24%;
-    --x3:58%; --y3:72%;
-    transform: translate3d(0, 2.5%, 0) scale(1.03);
+    transform: translate3d(0, 8%, 0) scale(1.03);
   }
 }
 
