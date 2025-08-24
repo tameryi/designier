@@ -162,7 +162,7 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
                         alt={`${work.title} portfolio image ${index + 1}`} 
                         width={800} 
                         height={600} 
-                        className={`w-full h-auto rounded-lg ${image.customClass}`} 
+                        className={`w-full h-auto rounded-2xl ${image.customClass}`} 
                       />
                     </div>
                   </div>

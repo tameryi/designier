@@ -25,22 +25,19 @@ html, body { scroll-behavior: smooth; }
 }
 
 
-/* Shimmering animated border utility */
-@property --angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
+/* === Mevcut shimmer util’in aynısı; sadece duration toplam döngü için ayarlanıyor === */
+@property --angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 
 .shimmer-border {
   --radius: 16px;
   --thickness: 2px;
-  --duration: 8s;
+  --duration: 4.5s;      /* tek kartın tur süresi (istediğin hız) */
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
 }
 
+/* Ortak görünüm ve toplam süre (4 kart için 4x) */
 .shimmer-border::before {
   content: "";
   position: absolute;
@@ -51,7 +48,6 @@ html, body { scroll-behavior: smooth; }
     transparent 0deg 12deg,
     rgba(255,255,255,0.25) 18deg 36deg,
     transparent 48deg 360deg);
-  /* Hollow out the center so inner content remains solid */
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -62,11 +58,53 @@ html, body { scroll-behavior: smooth; }
   mask-composite: exclude;
   pointer-events: none;
   z-index: 1;
-  animation: spin var(--duration) linear infinite;
+
+  /* Toplam döngü: 4 × duration */
+  animation-duration: calc(var(--duration) * 4);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-@keyframes spin {
-  to { --angle: 360deg; }
+/* ==== Sıralı keyframe’ler ==== */
+/* 1. kart: 0–25% aralığında çalışır */
+@keyframes spin-seq-1 {
+  0%   { opacity:1; --angle: 0deg;   }
+  24.999% { opacity:1; --angle: 360deg; }
+  25%  { opacity:0; --angle: 360deg; }
+  100% { opacity:0; --angle: 360deg; }
+}
+/* 2. kart: 25–50% */
+@keyframes spin-seq-2 {
+  0%,24.999%  { opacity:0; --angle: 0deg; }
+  25%         { opacity:1; --angle: 0deg; }
+  49.999%     { opacity:1; --angle: 360deg; }
+  50%,100%    { opacity:0; --angle: 360deg; }
+}
+/* 3. kart: 50–75% */
+@keyframes spin-seq-3 {
+  0%,49.999%  { opacity:0; --angle: 0deg; }
+  50%         { opacity:1; --angle: 0deg; }
+  74.999%     { opacity:1; --angle: 360deg; }
+  75%,100%    { opacity:0; --angle: 360deg; }
+}
+/* 4. kart: 75–100% */
+@keyframes spin-seq-4 {
+  0%,74.999%  { opacity:0; --angle: 0deg; }
+  75%         { opacity:1; --angle: 0deg; }
+  99.999%     { opacity:1; --angle: 360deg; }
+  100%        { opacity:0; --angle: 360deg; }
+}
+
+/* ==== 4 kartı sıraya bağla ==== */
+/* parent container’ına göre seçebilirsin; örn. .services-grid içindeki kartlar */
+.services-grid .shimmer-border:nth-child(1)::before { animation-name: spin-seq-1; }
+.services-grid .shimmer-border:nth-child(2)::before { animation-name: spin-seq-2; }
+.services-grid .shimmer-border:nth-child(3)::before { animation-name: spin-seq-3; }
+.services-grid .shimmer-border:nth-child(4)::before { animation-name: spin-seq-4; }
+
+/* Erişilebilirlik */
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-border::before { animation: none; }
 }
 
 

@@ -6,7 +6,7 @@ export function Services() {
     <section id="services" className="section">
       <div className="container">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center text-white">What I Do</h2>
-        <div className="mt-10 grid md:grid-cols-2 gap-6">
+        <div className="mt-10 grid md:grid-cols-2 gap-6 services-grid">
           <div className="shimmer-border gradient-bg p-6">
             <div className="flex items-center gap-3">
               <FigmaLogo size={24} className="text-white" />
