@@ -33,9 +33,9 @@ export function Services() {
           <div className="shimmer-border gradient-bg p-6">
             <div className="flex items-center gap-3">
               <DesktopIcon size={24} className="text-white" weight='fill' />
-              <h3 className="text-lg font-medium text-white">Brand & Marketing Design</h3>
+              <h3 className="text-lg font-medium text-white">Landing Pages & Marketing Visuals</h3>
             </div>
-            <p className="mt-2 text-gray-300">Crafting landing pages, logos, and visual assets.</p>
+            <p className="mt-2 text-gray-300">Crafting conversion-focused landing pages, ads, and social media visuals.</p>
           </div>
         </div>
       </div>

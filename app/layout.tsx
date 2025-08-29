@@ -10,7 +10,7 @@ import MagneticButton from '@/components/magnetic-button'
 export const metadata: Metadata = {
   title: 'Designier – UI/UX Design & Frontend Development',
   description:
-    'Portfolio of Tamer Yılmaz, designer and frontend developer specializing in SaaS and Travel Tech.',
+    'Portfolio of Tamer Yılmaz, designer and frontend developer specializing in Startups and Travel Tech.',
   icons: {
     icon: '/favicon.svg',
   },
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="dark">
       <body suppressHydrationWarning className={`${bricolage.variable} gradient-bg text-foreground antialiased min-h-screen font-sans`}>
-        <CursorTrail />
+
         {/* Google Ads (gtag.js) */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-10877799252" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">
