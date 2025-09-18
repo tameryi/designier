@@ -13,8 +13,8 @@ const VIDEOS: VideoItem[] = [
   { src: '/images/video1.mp4', aspectRatio: 'vertical', title: 'Vertical Video', order: 1 },
   { src: '/images/video2.mp4', aspectRatio: 'horizontal', title: 'Horizontal Video 1', order: 2 },
   { src: '/images/video3.mp4', aspectRatio: 'square', title: 'Horizontal Video 2', order: 3 },
-//   { src: '/images/video5.mp4', aspectRatio: 'horizontal', title: 'Square Video', order: 5 },
-  { src: '/images/video4.mp4', aspectRatio: 'horizontal', title: 'Horizontal Video 3', order: 4 },
+  { src: '/images/video5.mp4', aspectRatio: 'horizontal', title: 'Square Video', order: 5 },
+//   { src: '/images/video4.mp4', aspectRatio: 'horizontal', title: 'Horizontal Video 3', order: 4 },
 ];
 
 export function VideoCollage({ videos = VIDEOS }: { videos?: VideoItem[] }) {
