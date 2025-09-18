@@ -8,11 +8,38 @@ import CursorTrail from '@/components/cursor-trail'
 import MagneticButton from '@/components/magnetic-button'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://designier.co'),
   title: 'Designier – UI/UX Design & Frontend Development',
   description:
     'Portfolio of Tamer Yılmaz, designer and frontend developer specializing in Startups and Travel Tech.',
   icons: {
     icon: '/favicon.svg',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://designier.co/',
+    title: 'Design & Frontend Development for Startups and Remote Teams',
+    description:
+      'Portfolio of Tamer Yılmaz, designer and frontend developer specializing in Startups and Travel Tech.',
+    siteName: 'Designier',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Designier – Tamer Yılmaz Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@tameryilma' as any,
+    creator: '@tameryilma' as any,
+    title: 'Designier – UI/UX & Frontend',
+    description:
+      'Portfolio of Tamer Yılmaz, designer and frontend developer specializing in Startups and Travel Tech.',
+    images: ['/og/og.png'],
   },
 }
 
