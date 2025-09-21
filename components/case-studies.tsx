@@ -17,14 +17,14 @@ const CASE_STUDIES = [
     description: 'Designed and developed the frontend for a modern travel booking platform with flights and hotels.',
     image: '/images/fibula.webp',
   },
-  {
-    title: 'Bilyoner',
-    slug: 'bilyoner',
-    role: 'Frontend Development (Figma to Code)',
-    industry: 'Betting / Gaming',
-    description: 'Converted Figma designs into responsive, production-ready code.',
-    image: '/images/bilyoner-p.webp',
-  },
+  // {
+  //   title: 'Bilyoner',
+  //   slug: 'bilyoner',
+  //   role: 'Frontend Development (Figma to Code)',
+  //   industry: 'Betting / Gaming',
+  //   description: 'Converted Figma designs into responsive, production-ready code.',
+  //   image: '/images/bilyoner-p.webp',
+  // },
 ]
 
 export function CaseStudies() {
