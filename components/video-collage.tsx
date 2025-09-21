@@ -96,7 +96,7 @@ export function VideoCollage({ videos = VIDEOS }: { videos?: VideoItem[] }) {
   };
 
   return (
-    <section className="section">
+    <section id='works' className="section">
       <div className="container">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center text-white mb-12">
           Works in Motion

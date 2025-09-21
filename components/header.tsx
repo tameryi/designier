@@ -35,7 +35,7 @@ export function Header() {
         </Link>
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm text-gray-200">
-          <Link href="/#portfolio" className="hover:text-white">Portfolio</Link>
+          <Link href="/#works" className="hover:text-white">Portfolio</Link>
           <Link href="/#about" className="hover:text-white">About</Link>
           <Link href="/#contact" className="hover:bg-white hover:text-black btn btn-outline bg-black">Contact</Link>
         </nav>
@@ -88,7 +88,7 @@ export function Header() {
             <div className="container py-4">
               <ul className="flex flex-col gap-2 text-base text-gray-200">
                 <li>
-                  <Link href="/#portfolio" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
+                  <Link href="/#works" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
                 </li>
                 <li>
                   <Link href="/#about" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>About</Link>
