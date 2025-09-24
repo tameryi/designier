@@ -13,7 +13,7 @@ const VIDEOS: VideoItem[] = [
   { src: '/images/video1.mp4', aspectRatio: 'vertical', title: 'Vertical Video', order: 2 },
   { src: '/images/video2.mp4', aspectRatio: 'horizontal', title: 'Horizontal Video 1', order: 3 },
   { src: '/images/video3.mp4', aspectRatio: 'square', title: 'Horizontal Video 2', order: 4 },
-  { src: '/images/video5.mp4', aspectRatio: 'horizontal', title: 'Square Video', order: 5 },
+  { src: '/images/video5.mp4', aspectRatio: 'square', title: 'Square Video', order: 5 },
   { src: '/images/video6.mp4', aspectRatio: 'full', title: 'Horizontal Video 3', order: 1 },
 ];
 
@@ -76,7 +76,7 @@ export function VideoCollage({ videos = VIDEOS }: { videos?: VideoItem[] }) {
       case 'horizontal':
         return 'aspect-video';
       case 'square':
-        return 'aspect-square';
+        return 'aspect-[4/3]';
       case 'full':
         return 'aspect-full';
       default:
@@ -91,7 +91,7 @@ export function VideoCollage({ videos = VIDEOS }: { videos?: VideoItem[] }) {
       case 'horizontal':
         return 'md:col-span-3 lg:col-span-3';
       case 'square':
-        return 'md:col-span-1 lg:col-span-1';
+        return 'md:col-span-2 lg:col-span-2';
       case 'full':
         return 'md:col-span-4 lg:col-span-4';
       default:
