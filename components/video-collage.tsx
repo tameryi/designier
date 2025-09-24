@@ -3,18 +3,18 @@ import { useRef, useEffect, useState, useMemo } from 'react';
 
 interface VideoItem {
   src: string;
-  aspectRatio: 'vertical' | 'horizontal' | 'square';
+  aspectRatio: 'vertical' | 'horizontal' | 'square' | 'full';
   title: string;
   // Optional: lower numbers appear earlier. If omitted, item goes to the end
   order?: number;
 }
 
 const VIDEOS: VideoItem[] = [
-  { src: '/images/video1.mp4', aspectRatio: 'vertical', title: 'Vertical Video', order: 1 },
-  { src: '/images/video2.mp4', aspectRatio: 'horizontal', title: 'Horizontal Video 1', order: 2 },
-  { src: '/images/video3.mp4', aspectRatio: 'square', title: 'Horizontal Video 2', order: 3 },
+  { src: '/images/video1.mp4', aspectRatio: 'vertical', title: 'Vertical Video', order: 2 },
+  { src: '/images/video2.mp4', aspectRatio: 'horizontal', title: 'Horizontal Video 1', order: 3 },
+  { src: '/images/video3.mp4', aspectRatio: 'square', title: 'Horizontal Video 2', order: 4 },
   { src: '/images/video5.mp4', aspectRatio: 'horizontal', title: 'Square Video', order: 5 },
-//   { src: '/images/video4.mp4', aspectRatio: 'horizontal', title: 'Horizontal Video 3', order: 4 },
+  { src: '/images/video6.mp4', aspectRatio: 'full', title: 'Horizontal Video 3', order: 1 },
 ];
 
 export function VideoCollage({ videos = VIDEOS }: { videos?: VideoItem[] }) {
@@ -77,6 +77,8 @@ export function VideoCollage({ videos = VIDEOS }: { videos?: VideoItem[] }) {
         return 'aspect-video';
       case 'square':
         return 'aspect-square';
+      case 'full':
+        return 'aspect-full';
       default:
         return 'aspect-video';
     }
@@ -90,6 +92,8 @@ export function VideoCollage({ videos = VIDEOS }: { videos?: VideoItem[] }) {
         return 'md:col-span-3 lg:col-span-3';
       case 'square':
         return 'md:col-span-1 lg:col-span-1';
+      case 'full':
+        return 'md:col-span-4 lg:col-span-4';
       default:
         return 'md:col-span-3 lg:col-span-2';
     }
