@@ -31,12 +31,12 @@ const works: Record<WorkSlug, Work> = {
       'The platform launched successfully, offering customers a seamless booking experience and improving overall conversions.',
     image: '/images/fibula.webp',
     portfolioImages: [
-      { src: '/images/fibula-d1.webp', layout: 'full' }, // 1 full image
+      { src: '/images/fibula-d1.png', layout: 'full' }, // 1 full image
       { src: '/images/fibula-m1.png', layout: 'third', customClass: 'rounded-2xl border border-white/10' }, // 1 half - 1 half (2 images side by side)
       { src: '/images/fibula-m2.png', layout: 'third', customClass: 'rounded-2xl border border-white/10' }, // 1 half - 1 half (2 images side by side)
       { src: '/images/fibula-m3.png', layout: 'third', customClass: 'rounded-2xl border border-white/10' }, // 1 image - 1 image - 1 image (3 images side by side)
-      { src: '/images/fibula-d2.webp', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
-      { src: '/images/fibula-d3.webp', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/fibula-d2.png', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
+      { src: '/images/fibula-d3.png', layout: 'full' }, // 1 image - 1 image - 1 image (3 images side by side)
     ],
   },
   bilyoner: {
