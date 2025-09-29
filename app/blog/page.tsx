@@ -13,7 +13,7 @@ export default async function BlogIndexPage() {
 
   return (
     <section className="section">
-      <div className="container">
+      <div className="container !max-w-3xl">
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Blog</h1>
         <div className="mt-10 grid grid-cols-1 gap-6">
           {posts.map((post) => (
