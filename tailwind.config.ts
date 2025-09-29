@@ -23,6 +23,7 @@ export default {
           'Apple Color Emoji',
           'Segoe UI Emoji',
         ],
+        inter: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
       colors: {
         background: '#0a0a0a',
@@ -34,7 +35,7 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 } satisfies Config
 
 

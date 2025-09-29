@@ -33,7 +33,7 @@ export default async function BlogIndexPage() {
                     <h2 className="text-xl font-medium text-white">
                       {post.frontmatter.title}
                     </h2>
-                    <p className="text-sm text-gray-300 mt-1">{new Date(post.frontmatter.date).toLocaleDateString()}</p>
+                    <p className="text-sm text-gray-300 mt-1">{formatDate(post.frontmatter.date)}</p>
                     {post.frontmatter.excerpt && (
                       <p className="text-gray-300 mt-2">{post.frontmatter.excerpt}</p>
                     )}
@@ -46,6 +46,18 @@ export default async function BlogIndexPage() {
       </div>
     </section>
   )
+}
+
+function formatDate(input: string): string {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  }).formatToParts(new Date(input))
+  const day = parts.find(p => p.type === 'day')?.value ?? ''
+  const month = parts.find(p => p.type === 'month')?.value ?? ''
+  const year = parts.find(p => p.type === 'year')?.value ?? ''
+  return `${day} ${month} ${year}`
 }
 
 
