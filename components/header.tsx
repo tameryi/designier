@@ -37,6 +37,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm text-gray-200">
           <Link href="/#works" className="hover:text-white">Portfolio</Link>
           <Link href="/#about" className="hover:text-white">About</Link>
+          <Link href="/blog" className="hover:text-white">Blog</Link>
           <Link href="/#contact" className="hover:bg-white hover:text-black btn btn-outline bg-black">Contact</Link>
         </nav>
         {/* Mobile toggle */}
@@ -92,6 +93,9 @@ export function Header() {
                 </li>
                 <li>
                   <Link href="/#about" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>About</Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="block rounded-lg px-3 py-2 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>Blog</Link>
                 </li>
                 <li>
                   <Link href="/#contact" className="block rounded-lg px-3 py-2 btn btn-outline hover:bg-[#F683AC]" onClick={() => setIsMenuOpen(false)}>Contact</Link>
