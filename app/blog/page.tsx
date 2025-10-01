@@ -18,9 +18,9 @@ export default async function BlogIndexPage() {
         <div className="mt-10 grid grid-cols-1 gap-6">
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
-              <article className="card p-6 border border-white/10 transition hover:border-white/20 hover:shadow-lg hover:shadow-black/30">
+              <article className="card !bg-transparent p-6 border border-white/10 transition hover:bg-black hover:border-white/20 hover:shadow-lg hover:shadow-black/30">
                 <div className="flex gap-6 items-start">
-                  <div className="w-28 h-20 shrink-0 overflow-hidden rounded-lg bg-gray-800">
+                  <div className="w-40 h-32 shrink-0 overflow-hidden rounded-lg bg-gray-800">
                     <Image
                       src={post.frontmatter.thumbnail || '/og/og.png'}
                       alt={post.frontmatter.title}
