@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  verification: {
+    google: 'hgZ0Zm1wct8KV6HfBLP6-75WR0UbYP1ov4JxREIZ7ec',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -58,6 +61,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-10877799252');
+          `}
+        </Script>
+
+        {/* Google Analytics 4 */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-HBYJ2JQQ59" strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HBYJ2JQQ59');
           `}
         </Script>
 
