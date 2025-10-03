@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <sitemap>
-      <loc>https://designier.co/sitemap.xml</loc>
-   </sitemap>
-   <sitemap>
-      <loc>https://designier.co/studio/sitemap_index.xml</loc>
-   </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://designier.co/</loc>
+  </url>
+  <url>
+    <loc>https://designier.co/blog</loc>
+  </url>
+  <url>
+    <loc>https://designier.co/blog/5-ux-principles</loc>
+  </url>
+  <url>
+    <loc>https://designier.co/blog/predictive-ux</loc>
+  </url>
+  <url>
+    <loc>https://designier.co/blog/user-flows-in-travel-tech</loc>
+  </url>
+</urlset>
