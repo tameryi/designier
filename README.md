@@ -1,9 +1,9 @@
 # Designier – Next.js App
 
-Modern portfolio site built with Next.js 14 (App Router), TypeScript, and Tailwind CSS.
+Modern portfolio site built with Next.js 15 (App Router), TypeScript, and Tailwind CSS.
 
 ## Requirements
-- Node.js 18+
+- Node.js 20.9+ (Node.js 22 recommended)
 - npm 9+
 
 ## Install
